@@ -7,7 +7,7 @@ To use the default configuration:
 
     make
 
-Will generate `table.pdf`.
+Will generate `tables.pdf`.
 The script is configurable using the CLI:
 
     python quotifeuille.py --help
