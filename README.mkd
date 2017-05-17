@@ -1,0 +1,26 @@
+# Quotifeuille
+Automatic generation of printable tables allowing one to enforce its habits.
+
+
+## Usage
+To use the default configuration:
+
+    make
+
+Will generate `table.pdf`.
+The script is configurable using the CLI:
+
+    python quotifeuille.py --help
+
+
+## Installation
+
+    git clone https://github.com/Aluriak/Quotifeuille.git
+
+Needs latex, make, python to work.
+Includes the [Ganter FCA package](http://www.math.tu-dresden.de/~ganter/fca/) in order to allow compilation with latex without installing anything particular.
+
+
+## Attempts
+File [test.tex](test.tex) is the ruins of a full-latex attempt, using various ressources to automatize the table creation.
+For-loops do not work properly inside some environments, e.g. the fca package.
