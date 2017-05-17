@@ -11,16 +11,18 @@ def parse_cli():
     parser.add_argument('--columns', '-c', nargs='+', default=('work', 'read', 'code'),
                         help='columns to show in each table')
     parser.add_argument('--tables', '-t', help='number of table per page', default=3)
-    parser.add_argument('--lines', '-l', help='number of lines per table', default=58)
+    parser.add_argument('--lines', '-l', help='number of lines per table', default=56)
     parser.add_argument('--padding', '-p', default=0.05,
                         help='ratio of the page dedicated to space between tables')
     parser.add_argument('--output', '-o', help='name of the output tex file',
-                        default='table.tex')
+                        default='tables.tex')
     return parser.parse_args()
 
 
 LATEX_TEMPLATE = r"""
 \documentclass[10pt]{{article}}
+\usepackage[T1]{{fontenc}}
+\usepackage[utf8]{{inputenc}}
 \usepackage{{fca}}
 \usepackage[top=0.25in, bottom=.2in, left=.2in, right=.2in]{{geometry}}
 \pagenumbering{{gobble}}
