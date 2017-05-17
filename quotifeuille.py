@@ -90,4 +90,5 @@ def write_page(outfile:str, columns, line_per_page, context_names, col_padding):
 
 if __name__ == "__main__":
     args = parse_cli()
-    write_page(args.output, args.columns, args.lines, DEFAULT_CONTEXT_NAME * args.tables, args.padding)
+    write_page(args.output, args.columns, int(args.lines),
+               DEFAULT_CONTEXT_NAME * int(args.tables), float(args.padding))
